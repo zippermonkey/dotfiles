@@ -13,5 +13,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-completions 
 # fzf-tab
 git clone https://github.com/Aloxaf/fzf-tab
+# pure theme
+git clone https://github.com/sindresorhus/pure.git
 
 popd
