@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLUGIN_DIR=./.zsh
+PLUGIN_DIR=./zsh/.zsh
 mkdir -p $PLUGIN_DIR
 
 pushd ${PLUGIN_DIR}
