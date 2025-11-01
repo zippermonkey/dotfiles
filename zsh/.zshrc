@@ -1,11 +1,11 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.zshhistfile
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/zippermonkey/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -19,7 +19,7 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
 # Plugins
-ZSH_CUSTOM=~/.zsh
+ZSH_CUSTOM=$HOME/.zsh
 # autosuggestions
 source ${ZSH_CUSTOM}/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax-highlighting
@@ -39,4 +39,5 @@ autoload -U promptinit; promptinit
 PURE_CMD_MAX_EXEC_TIME=1
 prompt pure
 
-
+# alias
+alias ls="ls --color"
