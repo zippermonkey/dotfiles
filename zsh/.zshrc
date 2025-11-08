@@ -7,8 +7,13 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 
+# Optimize compinit - only run once per day
 autoload -Uz compinit
-compinit
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 # End of lines added by compinstall
 
 
@@ -41,3 +46,7 @@ prompt pure
 
 # alias
 alias ls="ls --color"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
